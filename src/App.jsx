@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import './App.css';
+
+import { Title, TitleSmall, Text, TextMedia, Subtitle } from './styles/styles';
+import { GlobalStyles } from './styles/globalStyles';
 
 function App() {
-  return <div className='App'>Hello World</div>;
+  return (
+    <>
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
