@@ -81,6 +81,7 @@ const FooterStyle = styled.footer`
       &__btn {
         grid-column: col-start -3 / center-end;
         align-self: center;
+        justify-self: end;
       }
     }
   }
