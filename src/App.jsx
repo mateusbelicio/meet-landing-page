@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import React from 'react';
 
-import { Title, TitleSmall, Text, TextMedia, Subtitle } from './styles/styles';
+import { Hero } from './layout/Hero';
 import { GlobalStyles } from './styles/globalStyles';
+import { Features } from './layout/Features';
+import { Footer } from './layout/Footer';
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <GlobalStyles />
-    </>
+      <main>
+        <Hero />
+        <Features />
+      </main>
+      <Footer />
+    </React.Fragment>
   );
 }
 

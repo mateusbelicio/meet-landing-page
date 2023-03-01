@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+export const breakpoint = {
+  tablet: '35em',
+  desktop: '60em',
+};
+
 export const GlobalStyles = createGlobalStyle`
   :root {
     --clr-primary-200: #8fe3f9;
@@ -32,6 +37,8 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     line-height: 1;
     text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+    background-color: var(--clr-neutral-300);
   }
 
   html:focus-within {
@@ -49,6 +56,16 @@ export const GlobalStyles = createGlobalStyle`
   textarea,
   select {
     font: inherit;
+  }
+
+  ::selection {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-300);
+  }
+
+  *:focus-visible {
+    outline: 2px dashed var(--clr-primary-400);
+    outline-offset: 2px;
   }
 
   @media (prefers-reduced-motion: reduce) {
